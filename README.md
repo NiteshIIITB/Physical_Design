@@ -25,9 +25,7 @@ Aspect ratio = Chip Height/Chip Width
 ```  
   
   
-</details>
-<details>
-  <summary><b>Defining Location of Preplaced cells</b></summary>
+
   <h3>Preplaced cells</h3>
   <p>Pre-placed cells are fixed-position Intellectual Properties (IPs) with significant combinational logic. They're positioned before automated placement and routing in integrated circuit design, hence the term "pre-placed."</p>
   <p>Preplaced cells are generally placed at the location from where it is nearest to all the other circuit blocks accessing it. Once placed they are not modified in terms of location thereafter.</p>
@@ -43,7 +41,7 @@ Aspect ratio = Chip Height/Chip Width
 </div> 
 
 <h3>Power Planning(Solution)</h3>
-<p>Each block on the chip, however, cannot have its own decap unlike the pre-placed macros. Therefore, a good power planning ensures that each block has its own VDD and VSS pads connected to the horizontal and vertical power and GND lines which form a power mesh.</p>
+<p>While each block on the chip cannot have individual decoupling capacitors (decaps) like pre-placed macros, effective power planning ensures that each block is equipped with its dedicated VDD and VSS pads. These pads are strategically connected to the horizontal and vertical power and ground (GND) lines, forming a comprehensive power mesh.</p>
 </details>
 
 <h1>References</h1>
