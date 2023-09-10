@@ -26,6 +26,17 @@ Aspect ratio = Chip Height/Chip Width
   
   
 </details>
+<details>
+  <summary><b>Defining Location of Preplaced cells</b></summary>
+  <h3>Preplaced cells</h3>
+  <p>Pre-placed cells are fixed-position Intellectual Properties (IPs) with significant combinational logic. They're positioned before automated placement and routing in integrated circuit design, hence the term "pre-placed."</p>
+  <p>Preplaced cells are generally placed at the location from where it is nearest to all the other circuit blocks accessing it. Once placed they are not modified in terms of location thereafter.</p>
+
+  <h3>Decoupling Capacitor</h3>
+  <p>
+    Pre-placed cells are often accompanied by decoupling capacitors (decaps) in integrated circuit (IC) design. Long wire lengths introduce resistive and capacitive effects that can result in substantial power supply voltage drops before reaching the logic circuits. This can push signal values into undefined regions, beyond the noise margin. Decaps are substantial capacitors charged to the power supply voltage and strategically positioned near the logic circuits. Their primary purpose is to decouple the circuit from the power supply, ensuring a stable voltage and supplying instantaneous current when needed. Decaps also mitigate crosstalk and facilitate efficient local communication.
+  </p>
+</details>
 
 <h1>References</h1>
 <ul>
