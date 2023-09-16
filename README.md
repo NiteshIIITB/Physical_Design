@@ -26,6 +26,60 @@ OpenLane stands out as an exceptional achievement in open-source chip developmen
 </p>
 </details>
 
+<details>
+  <summary><b>RTL to GDS using Openlane</b></summary>
+ The RTL to GDS (Register Transfer Level to Graphic Design System) flow in OpenLane is a multi-stage, automated process used to design and manufacture integrated circuits (ICs). This flow takes a high-level description of the chip's functionality in RTL (Register Transfer Level) and transforms it into a physical layout that can be manufactured.
+
+Here's a step-by-step explanation of the RTL to GDS flow in OpenLane:
+
+1. **Design Entry (RTL):**
+   - The process begins with the creation of the RTL design, which represents the functionality of the digital logic circuit using a hardware description language (HDL) like Verilog or VHDL.
+   - Designers define the behavior of the circuit, specifying how data flows and registers are updated.
+
+2. **Synthesis:**
+   - The RTL code is synthesized into a gate-level representation. This step involves mapping the high-level RTL constructs to a library of standard cells (AND, OR, Flip-Flops, etc.).
+   - The synthesized design is optimized for area, power, and timing.
+
+3. **Floorplanning:**
+   - In this stage, the physical area of the chip is divided into blocks and areas for specific functions like logic, memory, and I/O.
+   - Placement of standard cells and macros is determined, taking into account factors like signal timing and power distribution.
+
+4. **Placement:**
+   - The synthesized gates are placed within the designated floorplan areas.
+   - The placement aims to minimize wirelengths, reduce congestion, and meet timing constraints.
+
+5. **Clock Tree Synthesis (CTS):**
+   - The clock tree is a network of buffers and wires that distribute clock signals to all sequential elements (flip-flops) in a chip.
+   - CTS optimizes clock distribution, ensuring that clock signals reach all parts of the chip with minimal skew and power consumption.
+
+6. **Routing:**
+   - Routing connects the inputs and outputs of gates to create the physical connections necessary for the chip's functionality.
+   - Global and detailed routing steps are performed to establish the complete routing fabric.
+
+7. **DRC (Design Rule Check) and LVS (Layout vs. Schematic):**
+   - DRC checks the physical layout against manufacturing design rules to ensure that the chip can be manufactured without errors.
+   - LVS compares the physical layout to the expected behavior of the synthesized netlist to ensure correctness.
+
+8. **GDS Generation:**
+   - Once the design passes DRC and LVS, a GDSII (Graphic Data System) file is generated. This file contains the final layout information that can be used for chip fabrication.
+
+9. **Tape-out:**
+   - The GDSII file is submitted to a semiconductor foundry for manufacturing. This step involves finalizing the design for production.
+
+10. **Post-Tapeout Steps:**
+    - After tape-out, the chip goes through a series of steps, including wafer fabrication, testing, and packaging, to prepare it for market release.
+
+OpenLane automates and streamlines this entire RTL to GDS flow, making it accessible to a broader audience and significantly reducing the time and effort required for chip design. It achieves this by integrating various EDA tools, optimizing parameters, and offering customization options to meet specific project requirements.
+
+<br>
+<div align="center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/31ab9d94-f28b-4900-80d4-ce9bf8cef25e">
+</div>
+  
+
+
+</details>
+
 <h1>Day 2 : Floorplanning and Introduction to Library Cells</h1>
 <details>
   <summary><b>Chip Floorplanning considerations</b></summary>
