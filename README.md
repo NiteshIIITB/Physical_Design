@@ -79,6 +79,42 @@ OpenLane automates and streamlines this entire RTL to GDS flow, making it access
 
 
 </details>
+<details>
+  <summary><b>RTL and Synthesis using OpenLane</b></summary>
+  <h4>Commands Used</h4>
+
+```
+docker
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+```
+<div align = "center">
+  <img src ="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/f6e044ba-84dd-4925-a111-4787d6110b1e">
+</div>
+
+<h3>Synthesis</h3>
+
+<h4>Command Used</h4>
+
+```
+run_synthesis
+```
+<h4>Synthesis Results<h4>
+<div align = "center">
+  <img src ="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/6efd023c-edc1-4a91-bc91-b32793a35c62">
+</div>
+
+<h4>Flop Ratio</h4>
+
+```
+Flop ratio = Number of D Flip flops 
+             ______________________
+             Total Number of cells
+```
+
+From Synthesis Stats Flop ratio = 1512/10104 = 0.1496(14.96%)
+</details>
 
 <h1>Day 2 : Floorplanning and Introduction to Library Cells</h1>
 <details>
