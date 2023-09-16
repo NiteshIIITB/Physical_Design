@@ -369,7 +369,12 @@ V1  N1  0   DC 5V ; DC voltage source V1 from node N1 to ground (0) with 5 volts
 .MEASURE  DC  V(N3) WHEN V(N2)=3V ; Measure voltage at node N3 when V(N2) reaches 3V
 
 ```
+<h4>CMOS SPICE deck steps</h4>
+<div align = "center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/28c828ad-348c-4fd5-96e3-2d10a7cd30bb">
+</div>
 
+<p><b>In above figure we have taken size of NMOS and PMOS as equal which is not the case in real cmos circuits.</b></p>
 </details>
 
 <h1>References</h1>
