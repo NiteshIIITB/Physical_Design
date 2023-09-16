@@ -201,6 +201,43 @@ run_floorplan
 
 <img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/fc8c72c2-7f3e-455f-93e7-ac3e40e8d4e7">  
 </div>
+
+<h4>Post-Floorplan Run and Viewing the Floorplan in Magic:</h4>
+<ul>
+<li>After running the floorplan step in OpenLANE, a .def file representing the floorplan will be generated within the results/floorplan directory. This file encapsulates the layout and organization of the integrated circuit components.</li>
+<li>To visualize the floorplan layout using the Magic VLSI layout tool, follow these steps:<br>
+
+Open a terminal or command prompt.<br>
+
+Navigate to the ```results/floorplan``` directory within your OpenLANE workspace.<br>
+Once you're in the ```results/floorplan``` directory, invoke Magic to view the floorplan by running the following command:<br>
+
+```
+magic -T /home/OpenLane/sky130A.tech lef read ../../tmp/merged.min.lef def read picorv32.def &
+```
+
+</li>  
+<div align="center">
+  <img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/4ca2fff9-c9f3-469a-a964-2efd81362f34">
+</div>  
+</ul>  
+In Magic layout design software:<br>
+To zoom into a specific area of the layout, you can use the following steps:<br>
+<ul>
+<li>Select an area by clicking the left mouse button and dragging to create a selection box.</li>
+<li>Then, hold the right mouse button and press the 'z' key. This action should zoom in on the selected area.</li>
+</ul>
+ <br> 
+To identify various components within the layout, you can use the `what` command within the tkcon window. After making a selection (e.g., clicking on a component), enter the `what` command to get information about the selected component.
+<br>
+When you zoom in, you can also get a closer view of the decaps (decapacitors) present in the picorv32a chip or any other components.<br>
+
+<br>
+The standard cell can typically be found at the bottom left corner of the layout.<br>
+<div>
+  <img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/8fd3cab0-704d-4cd8-9fce-af8585b5ef6a">
+</div>
+
 </details>
 
 <h1>References</h1>
