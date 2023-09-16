@@ -338,6 +338,8 @@ A poor choice of threshold points can lead to a negative delay value. Therefore,
 
 </details>
 
+<h1>Day 3:Library Cell Design using Magic Layout and ngspice Characterization</h1>
+
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
