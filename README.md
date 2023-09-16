@@ -1,6 +1,29 @@
 <h1>Day 1</h1>
 <details>
-  <summary>Introduction to QFN-48 Package,chips,pads,core,die and IPs</summary>
+  <summary><strong>Introduction to OpenLane</strong></summary>
+  <h2>Introduction</h2>
+  <p>The advent of open-source technology for chip development has brought about significant advancements, particularly with the availability of RTL designs and EDA (Electronic Design Automation) Tools at no cost. One notable contribution in this arena is the <a href="https://skywater-pdk.readthedocs.io/en/latest/rules.html" target="_blank">SKY130 PDK</a> collaboration between Skywater Technologies and Google. This development has effectively bridged gaps in open-source chip development.<br><br>
+
+Initially, the landscape of open-source chip design presented some challenges. There was a lack of clarity in the design flow, and the SKY130 PDK was primarily compatible with industrial-grade equipment. These issues were skillfully addressed through the creation of <a href="https://github.com/The-OpenROAD-Project/OpenLane" target="_blank">OpenLane</a>, a comprehensive solution that offers a fully automated and streamlined RTL-to-GDSII (Register Transfer Level to Graphic Design System II) design flow.<br><br>
+
+OpenLane stands out as an exceptional achievement in open-source chip development. It's important to note that OpenLane is not a standalone product; rather, it is a meticulously crafted workflow comprised of various EDA tools, automation scripts, and the SKY130 PDK. These components have been optimized to seamlessly integrate with open-source EDA tools, making chip development accessible to a wider audience and enhancing the efficiency of the entire process.</p>
+
+<h2>Advantages of OpenLane</h2>
+<p>The introduction of OpenLane has been a game-changer in the field of open-source chip development. This innovative solution goes beyond mere software; it represents a holistic approach to RTL-to-GDSII design flow. Here are some key aspects of OpenLane to highlight:<br>
+
+<b>Automation and Integration:</b> OpenLane is designed to automate the entire chip design process, from RTL synthesis to physical design, and it seamlessly integrates various EDA tools into a unified workflow. This automation greatly reduces the need for manual intervention, saving time and effort for designers.<br>
+
+<b>Accessibility:</b> OpenLane is accessible to a wide range of chip developers, including hobbyists, researchers, and small companies, who may not have access to costly commercial EDA tools. Its open-source nature fosters collaboration and knowledge sharing within the chip design community.<br>
+
+<b>Customization:</b>OpenLane is highly customizable, allowing users to tailor the design flow to their specific project requirements. This flexibility empowers designers to experiment with different configurations and optimizations, ultimately leading to better chip designs.<br>
+
+<b>Community Support:</b>OpenLane benefits from a vibrant and engaged user community. Developers and enthusiasts contribute to its continuous improvement, share best practices, and offer support to newcomers. This collaborative ecosystem accelerates the development of open-source chip design methodologies.<br>
+
+<b>Cost Efficiency:</b> By leveraging open-source tools and resources, OpenLane significantly reduces the cost barriers associated with chip development. This affordability enables smaller organizations and individuals to participate in chip design projects that were previously financially prohibitive.<br>
+
+<b>Integration with SKY130 PDK:</b> OpenLane's compatibility with the SKY130 PDK is a crucial component of its success. It ensures that designers can utilize the open-source PDK and take advantage of the latest manufacturing technologies, enabling them to create cutting-edge chips.
+
+</p>
 </details>
 
 <h1>Day 2 : Floorplanning and Introduction to Library Cells</h1>
