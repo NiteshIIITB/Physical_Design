@@ -170,6 +170,39 @@ Aspect ratio = Chip Height/Chip Width
 </div>
 </details>
 
+<details>
+  <summary><b>Floorplan in Openlane</b></summary>
+  To perform the floorplanning process for the "picorv32a" design in OpenLANE and visualize the results in Magic, follow these steps, considering the importance files and environment variables:<br>
+
+Important Files (in increasing priority order):<br>
+
+<ul>
+ <li>floorplan.tcl - System default environment variables.</li>
+<li>config.tcl</li>
+<li>sky130A_sky130_fd_sc_hd_config.tcl</li>
+</ul>
+Floorplan Environment Variables or Switches:
+<ul>
+<li><b>FP_CORE_UTIL:</b> Specifies floorplan core utilization.</li>
+<li><b>FP_ASPECT_RATIO:</b> Sets the floorplan aspect ratio.</li>
+<li><b>FP_CORE_MARGIN:</b> Defines the core-to-die margin area.</li>
+<li><b>FP_IO_MODE:</b> Determines pin configurations (1 for equidistant, 0 for non-equidistant).</li>
+<li><b>FP_CORE_VMETAL:</b> Sets the vertical metal layer.</li>
+<li><b>FP_CORE_HMETAL:</b> Sets the horizontal metal layer.<br> 
+Typically, these values are one greater than what's specified in the files.</li>
+</ul> 
+
+<h4>Command used</h4>
+
+```
+run_floorplan
+```
+<div align="center">
+
+<img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/fc8c72c2-7f3e-455f-93e7-ac3e40e8d4e7">  
+</div>
+</details>
+
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
