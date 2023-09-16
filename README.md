@@ -339,6 +339,38 @@ A poor choice of threshold points can lead to a negative delay value. Therefore,
 </details>
 
 <h1>Day 3:Library Cell Design using Magic Layout and ngspice Characterization</h1>
+<details>
+  <summary><b>CMOS Inverter ngspice simulations</b></summary>
+  <h2>SPICE deck</h2>
+  <p>A Spice deck, often referred to as a Spice netlist or simply Spice file, is a text-based input file used in electronic circuit simulation. Spice stands for "Simulation Program with Integrated Circuit Emphasis," and it is a widely used tool for simulating and analyzing electronic circuits.<br>
+
+A Spice deck contains a description of the components and connections within an electronic circuit, including resistors, capacitors, inductors, transistors, voltage sources, current sources, and more. It specifies the values of these components, their models (which define their behavior), and the interconnections between them. The Spice deck also defines the simulation settings and analysis directives.</p>
+
+<h4>Sample Spice Deck</h4>
+
+```
+* Spice Deck Example
+* Comments start with an asterisk
+
+* Circuit components
+R1  N1  N2  10k   ; Resistor R1 from node N1 to N2 with a value of 10k ohms
+C1  N2  N3  1n    ; Capacitor C1 from node N2 to N3 with a value of 1 nanofarad
+V1  N1  0   DC 5V ; DC voltage source V1 from node N1 to ground (0) with 5 volts
+
+* Transistors and other components can also be defined here
+
+* Simulation settings
+.TRAN  0.1ms  10ms ; Transient analysis from 0.1ms to 10ms
+.DC    V1  0V  10V  1V ; DC sweep of voltage source V1 from 0V to 10V in 1V steps
+.AC    DEC  100  1Hz  1MHz ; AC analysis from 1Hz to 1MHz with 100 points per decade
+
+* Analysis directives
+.PRINT  TRAN  V(N1) V(N2) ; Print the transient simulation results for nodes N1 and N2
+.MEASURE  DC  V(N3) WHEN V(N2)=3V ; Measure voltage at node N3 when V(N2) reaches 3V
+
+```
+
+</details>
 
 <h1>References</h1>
 <ul>
