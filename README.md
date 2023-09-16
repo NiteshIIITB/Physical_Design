@@ -239,6 +239,104 @@ The standard cell can typically be found at the bottom left corner of the layout
 </div>
 
 </details>
+<details>
+  <summary><b>Placement</b></summary>
+  Placement
+The placement step in the OpenLANE ASIC flow involves positioning the synthesized netlist onto the floorplan. This process is performed in two stages:
+
+<b>Global Placement:</b> In this stage, an optimal position for all cells is determined. The positions may not initially be legal, and cells may overlap. Optimization is carried out with the goal of reducing half-parameter wire length.
+
+<b>Detailed Placement:</b> Following global placement, the positions of cells are adjusted to make them legal within the design. Legalizing cells is crucial from a timing perspective, ensuring that the chip meets its performance requirements.
+
+Running the placement step in OpenLANE and visualizing the placement results in Magic can be accomplished with the following command:
+
+
+```
+run_placement
+```
+
+
+<div align="center">
+<img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/6c12819c-2d9a-44a7-90e1-7ae7eef8db9f">
+  
+</div>
+
+After running the placement step, you can use Magic to inspect and analyze the placement of cells, ensuring that they are positioned optimally and legally within the floorplan.
+
+
+To view the design in magic 
+
+```
+magic -T /home/OpenLane/sky130A.tech lef read ../../tmp/merged.max.lef def read picorv32.def &
+
+
+```
+<div align="center">
+<img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/1fb5d2a6-9ce8-48de-a3c7-6edc1bb3c4ad">
+<img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/0c54e4a8-5b59-4cbb-8610-67e59155808b">
+  
+</div>
+
+</details>
+<details>
+  <summary><b>Cell Design</b></summary>
+  
+ # Standard Cell Design Flow
+
+**Inputs:**
+- PDKs (Process Design Kits)
+- DRC & LVS rules (Design Rule Check & Layout vs. Schematic rules)
+- SPICE models
+- Libraries
+- User-defined specifications
+
+**Design Steps:**
+1. Circuit design
+2. Layout design (Art of layout, Euler's path, and stick diagram)
+3. Extraction of parasitics
+4. Characterization (timing, noise, power)
+
+**Outputs:**
+- CDL (Circuit Description Language)
+- LEF (Library Exchange Format)
+- GDSII (Graphic Data System II)
+- Extracted SPICE netlist (.cir)
+- Timing, noise, and power .lib files
+
+## Standard Cell Characterization Flow
+
+A typical standard cell characterization flow includes the following steps:
+
+1. Read in the models and tech files.
+2. Read the extracted SPICE netlist.
+3. Recognize the behavior of the cell.
+4. Read the subcircuits.
+5. Attach power sources.
+6. Apply stimulus to the characterization setup.
+7. Provide necessary output capacitance loads.
+8. Provide necessary simulation commands.
+
+The open-source software called GUNA can be used for characterization. Steps 1-8 are fed into the GUNA software, which generates timing, noise, and power models.
+
+## Timing Parameter Definitions
+
+| Timing Definition       | Value                  |
+|------------------------|------------------------|
+| slew_low_rise_thr      | 20% value              |
+| slew_high_rise_thr     | 80% value              |
+| slew_low_fall_thr      | 20% value              |
+| slew_high_fall_thr     | 80% value              |
+| in_rise_thr            | 50% value              |
+| in_fall_thr            | 50% value              |
+| out_rise_thr           | 50% value              |
+| out_fall_thr           | 50% value              |
+| rise delay             | time(out_fall_thr) - time(in_rise_thr)       |
+| Fall transition time   | time(slew_high_fall_thr) - time(slew_low_fall_thr) |
+| Rise transition time   | time(slew_high_rise_thr) - time(slew_low_rise_thr) |
+
+A poor choice of threshold points can lead to a negative delay value. Therefore, a correct choice of thresholds is crucial in timing characterization.
+
+</details>
 
 <h1>References</h1>
 <ul>
