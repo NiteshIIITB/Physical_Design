@@ -569,6 +569,34 @@ However, it's important to note that while Lee's algorithm is effective for rout
   
 </div>
 
+## Design Rule Check (DRC) for Physical Wires
+
+DRC is a critical step in the semiconductor design and manufacturing process, ensuring that a design complies with the predefined process technology rules provided by the foundry. It plays a pivotal role in the physical design flow, guaranteeing that the design adheres to manufacturing requirements and reduces the risk of chip failure, ultimately determining the quality of the chip.
+
+### Some Key Design Rules for Physical Wires
+
+1. **Minimum Width of the Wire:**
+   - This rule specifies the minimum acceptable width for wires in the design. Wires must be wide enough to carry the desired current without excessive resistance.
+
+2. **Minimum Spacing Between the Wires:**
+   - DRC checks for the minimum allowable distance between adjacent wires to prevent electrical interference or short circuits.
+
+3. **Minimum Pitch of the Wire:**
+   - The pitch refers to the center-to-center spacing between wires. DRC verifies that the pitch meets the required minimum value, ensuring proper wire placement and density.
+
+4. **Via Rules:**
+   - To address signal short violations or connect wires from one metal layer to another, designers use vias. DRC checks the following aspects of via design:
+
+     - **Via Width:** Ensures that the via's width is within acceptable limits for the chosen technology.
+     - **Via Spacing:** Checks the minimum spacing between vias to avoid electrical issues.
+     
+These design rules for physical wires are crucial for maintaining signal integrity, preventing shorts, and ensuring the manufacturability of integrated circuits.
+
+<div align="center">
+
+<img src ="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/f23f26a3-9d8a-4b58-ba2a-35133404e9be">  
+</div>
+
 </details>
 <h1>References</h1>
 <ul>
