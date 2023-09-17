@@ -448,7 +448,62 @@ These steps outline the essential processes in a 16-mask CMOS fabrication, encom
 
    This command launches Magic with the specified technology file and opens the `sky130_inv.mag` layout for viewing and seamless integration.
 
+   <div align="center">
+     <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/f37f164f-75fe-4b0c-b5da-f32622f8077b">
+   </div>
 
+## Verification and SPICE Extraction for Sky130 CMOS Inverter Layout
+
+To verify that the layout corresponds to a CMOS inverter in the Sky130 process, you can follow these verification steps:
+
+1. **Local Interconnect Layer (Locali):**
+   - In Sky130, the first layer is called the local interconnect layer (Locali).
+
+2. **P-Diffusion and N-Diffusion Regions:**
+   - Observe the P-diffusion and N-diffusion regions, along with the Polysilicon, to confirm the presence of CMOS transistors.
+
+3. **Drain and Source Connections:**
+   - Verify the drain and source connections:
+     - The drains of both PMOS and NMOS transistors should be connected to the output port (Y).
+     - The sources of both transistors should be connected to the power supply VDD (VPWR).
+
+4. **Library Exchange Format (LEF):**
+   - LEF, or Library Exchange Format, provides information about cell boundaries, VDD, and GND lines. It does not contain circuit logic details and is often used to protect intellectual property (IP).
+
+5. **SPICE Extraction:**
+   - To extract SPICE data from the Magic layout, follow these commands within the Magic environment using `tkcon`:
+     - `extract all`
+     - `ext2spice cthresh 0 rethresh 0`
+     - `ext2spice`
+
+   This generates the `sky130_in.spice` file.
+
+6. **SPICE Deck Editing:**
+   - Edit the `sky130_in.spice` SPICE deck to include the PMOS and NMOS libraries (`pshort.lib` and `nshort.lib`).
+   - Incorporate the minimum grid size of the inverter, typically measured from the Magic layout, into the deck as:
+     ```
+     .option scale=0.01u
+     ```
+   - Change the model names in the MOSFET definitions to `pshort.model.0` and `nshort.model.0` for PMOS and NMOS, respectively.
+
+7. **Voltage Sources and Simulation Commands:**
+   - Define voltage sources and simulation commands as follows for CMOS inverter circuit simulation.
+   - `VDD VPWR 0 3.3V`
+   - `VSS VGND 0 0V`
+   - `Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)`
+   - `.tran 1n 20n`
+   - `.control`
+   - `run`
+
+By following these steps, you can verify the CMOS inverter layout and extract the necessary SPICE data for simulation.
+
+<div align = "center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/8b37771c-17a7-4d4a-81dc-a9c505c1d340">
+</div>
+<br>
+<div align="center">
+  <img src= "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/89a0aff6-dca1-4e33-8f8f-85e7db0afb22">
+</div>
 
 <h4>Rise Delay Calculation</h4>
 <div align="center">
