@@ -422,6 +422,34 @@ These steps outline the essential processes in a 16-mask CMOS fabrication, encom
 
 <details>
   <summary><b>Tech File Labs</b></summary>
+
+<h2>CMOS Inverter Characterization</h2>  
+
+
+1. **Clone the `vsdstdcelldesign` Repository:**
+   - Clone the `vsdstdcelldesign` repository into your `openlane_working_dir/openlane` directory using the following command:
+
+     ```bash
+     git clone https://github.com/nickson-jose/vsdstdcelldesign
+     ```
+
+   This command will create a folder named `vsdstdcelldesign` within your `openlane` directory.
+
+2. **Prepare for Magic Invocation:**
+   - To invoke Magic and view the `sky130_inv.mag` file, the `sky130A.tech` file must be included in the command along with its path.
+   - To simplify this command and reduce complexity, you can copy the `sky130A.tech` file from the `magic` folder to the `vsdstdcelldesign` folder.
+
+3. **Invoke Magic:**
+   - Finally, you can easily invoke Magic to view the `sky130_inv.mag` file with the following command:
+
+     ```bash
+     magic -T vsdstdcelldesign/sky130A.tech vsdstdcelldesign/sky130_inv.mag &
+     ```
+
+   This command launches Magic with the specified technology file and opens the `sky130_inv.mag` layout for viewing and seamless integration.
+
+
+
 <h4>Rise Delay Calculation</h4>
 <div align="center">
   <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/e92610b4-3675-411e-a295-a13a8e0fb16b">
