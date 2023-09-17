@@ -1,5 +1,5 @@
 <h1>Physical Design using OpenLane and Sky130 PDK</h1>
-<!-- START_SECTION: Day1 -->
+
 <h1>Day 1</h1>
 <details>
   <summary><strong>Introduction to OpenLane</strong></summary>
@@ -117,7 +117,7 @@ Flop ratio = Number of D Flip flops
 
 From Synthesis Stats Flop ratio = 1512/10104 = 0.1496(14.96%)
 </details>
-<!-- END_SECTION: Day 1 -->
+
 <h1>Day 2 : Floorplanning and Introduction to Library Cells</h1>
 <details>
   <summary><b>Chip Floorplanning considerations</b></summary>
@@ -541,6 +541,7 @@ tpdf = 4.05437 - 4.05031 = 0.00406ns
 ```
 </details>
 
+<h1>Day 4: Pre-Layout Timing Analysis</h1>
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
