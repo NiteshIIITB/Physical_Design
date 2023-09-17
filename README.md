@@ -551,7 +551,25 @@ tpdf = 4.05437 - 4.05031 = 0.00406ns
 </details>
 
 <h1>Day 5: Final Steps of RTL to GDS</h1>
+<details>
+  <summary><b>Routing and Design Rule Check(DRC)</b></summary>
+  
+  ## Maze Routing and Lee's Algorithm
 
+Routing, in the context of electronic design automation (EDA), is the process of establishing physical connections between two pins on an integrated circuit. Routing algorithms are designed to take source and target pins and determine the most efficient path between them, ensuring a valid and optimized connection.
+
+One notable routing algorithm is the **Maze Routing algorithm**, which includes approaches like **Lee's algorithm**. This method leverages a grid structure, often resembling the grid used during cell customization, for routing purposes. Lee's algorithm starts with two designated points—the source and target—and utilizes this routing grid to identify the shortest or optimal route between them.
+
+In the Lee algorithm, labels are assigned to neighboring grid cells around the source, incrementing them incrementally from 1 until the path reaches the target (e.g., from 1 to 7). During this process, various paths may emerge, including L-shaped and zigzag-shaped routes. Lee's algorithm prioritizes selecting the best path, typically favoring L-shaped routes over zigzags. If no L-shaped paths are available, it may resort to zigzag routes. This approach proves especially valuable for global routing tasks within the IC design process.
+
+However, it's important to note that while Lee's algorithm is effective for routing between two pins, it can become time-consuming when dealing with a large number of pins, such as those found in complex integrated circuits. In such cases, alternative routing algorithms are often explored to address similar routing challenges efficiently.
+
+<div align="center">
+<img src="https://github.com/NiteshIIITB/Physical_Design/assets/140998787/48c7e627-33a7-4cf3-a525-a8f9ff9322f9">
+  
+</div>
+
+</details>
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
