@@ -542,6 +542,16 @@ tpdf = 4.05437 - 4.05031 = 0.00406ns
 </details>
 
 <h1>Day 4: Pre-Layout Timing Analysis</h1>
+
+
+
+<details>
+  <summary><b>Timing Analysis and Clock Tree Synthesis</b></summary>
+  
+</details>
+
+<h1>Day 5: Final Steps of RTL to GDS</h1>
+
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
