@@ -380,6 +380,66 @@ V1  N1  0   DC 5V ; DC voltage source V1 from node N1 to ground (0) with 5 volts
 
 </details>
 
+<details>
+  <summary><b>Inception of Layout of CMOS Inverter</b></summary>
+  
+  ## 16-Mask CMOS Fabrication Process
+
+1. **Substrate Selection:**
+   - Choose the appropriate substrate material for the CMOS chip.
+
+2. **Active Region Formation:**
+   - Isolate active regions using SiO2 and Si3N4 layers, defined through photolithography and etching.
+
+3. **N-Well and P-Well Creation:**
+   - Form N-well and P-well regions via ion implantation:
+     - Boron for P-well.
+     - Phosphorus for N-well.
+
+4. **Gate Terminal Fabrication:**
+   - Create NMOS and PMOS gate terminals using photolithography.
+
+5. **LDD (Lightly Doped Drain) Implementation:**
+   - Introduce LDD regions to prevent the hot electron effect.
+
+6. **Source & Drain Formation:**
+   - Add screen oxide to prevent channelling during implantation.
+   - Perform arsenic ion implantation for source and drain.
+   - Anneal to activate dopants.
+
+7. **Local Interconnects:**
+   - Remove screen oxide with HF etching.
+   - Deposit titanium (Ti) for low-resistance contacts.
+
+8. **Higher-Level Metalization:**
+   - Achieve planarization through Chemical Mechanical Polishing (CMP).
+   - Deposit TiN and Tungsten for interconnects.
+   - Apply a top SiN layer for chip protection.
+
+These steps outline the essential processes in a 16-mask CMOS fabrication, encompassing active region definition, well formation, gate creation, source/drain implantation, interconnects, and chip protection layers.
+
+</details>
+
+<details>
+  <summary><b>Tech File Labs</b></summary>
+
+```
+tr = 2.20395 - 2.16095 = 0.043ns
+```
+
+```
+tf = 4.0681 - 4.0392 = 0.0289ns
+```
+
+```
+tpdr = 2.1847 - 2.1503 = 0.0343ns
+```
+
+```
+tpdf = 4.05437 - 4.05031 = 0.00406ns
+```
+</details>
+
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
