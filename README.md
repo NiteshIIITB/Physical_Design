@@ -375,6 +375,7 @@ V1  N1  0   DC 5V ; DC voltage source V1 from node N1 to ground (0) with 5 volts
 </div>
 
 <p><b>In above figure we have taken size of NMOS and PMOS as equal which is not the case in real cmos circuits.</b></p>
+
 </details>
 
 <h1>References</h1>
