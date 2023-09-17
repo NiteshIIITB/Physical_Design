@@ -1,5 +1,5 @@
 <h1>Physical Design using OpenLane and Sky130 PDK</h1>
-
+<!-- START_SECTION: Day1 -->
 <h1>Day 1</h1>
 <details>
   <summary><strong>Introduction to OpenLane</strong></summary>
@@ -117,7 +117,7 @@ Flop ratio = Number of D Flip flops
 
 From Synthesis Stats Flop ratio = 1512/10104 = 0.1496(14.96%)
 </details>
-
+<!-- END_SECTION: Day 1 -->
 <h1>Day 2 : Floorplanning and Introduction to Library Cells</h1>
 <details>
   <summary><b>Chip Floorplanning considerations</b></summary>
