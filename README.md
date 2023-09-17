@@ -598,6 +598,10 @@ These design rules for physical wires are crucial for maintaining signal integri
 </div>
 
 </details>
+
+<details>
+  <summary><b>Power Distribution Network and Routing</b></summary>
+</details>
 <h1>References</h1>
 <ul>
   <li><a href ="https://github.com/kunalg123/">Kunal Ghosh Github(Mentor)</a></li>
