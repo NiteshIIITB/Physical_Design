@@ -422,19 +422,37 @@ These steps outline the essential processes in a 16-mask CMOS fabrication, encom
 
 <details>
   <summary><b>Tech File Labs</b></summary>
+<h4>Rise Delay Calculation</h4>
+<div align="center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/e92610b4-3675-411e-a295-a13a8e0fb16b">
+</div>
+  
 
 ```
 tr = 2.20395 - 2.16095 = 0.043ns
 ```
-
+<h4>Fall Delay Calculation</h4>
+<div align="center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/6da5cfc6-6524-4baf-b342-f69bbfbee5d4">
+</div>
+  
 ```
 tf = 4.0681 - 4.0392 = 0.0289ns
 ```
 
+<h4>Propogation Delay Rise</h4>
+<div align="center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/d7ecc59c-2643-4d68-9494-a8178e44e0d2">
+</div>
+  
 ```
 tpdr = 2.1847 - 2.1503 = 0.0343ns
 ```
-
+<h4>Propogation Delay Fall</h4>
+<div align="center">
+  <img src = "https://github.com/NiteshIIITB/Physical_Design/assets/140998787/0dcaf738-0a1d-4df1-aa97-5819b7a82ae6">
+</div>
+  
 ```
 tpdf = 4.05437 - 4.05031 = 0.00406ns
 ```
